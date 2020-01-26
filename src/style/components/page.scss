@@ -1,0 +1,31 @@
+body {
+  font-family: $ff;
+  color: $content;
+  font-size: 16px;
+}
+
+button.btn,
+a.btn {
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  color: $content-white;
+  text-decoration: none;
+}
+
+.ungutter {
+  margin-right: -$gutter;
+  margin-left: -$gutter;
+}
+
+.flex {
+  display: flex;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}

@@ -1,0 +1,17 @@
+.container {
+  width: 960px;
+  margin: 0 auto;
+  padding-right: $gutter;
+  padding-left: $gutter;
+  box-sizing: border-box;
+}
+
+@for $i from 1 to 16 {
+  .col-#{$i} {
+    width: $i * 100% / 16;
+  }
+}
+
+.cell {
+  padding: 0 $gutter;
+}
