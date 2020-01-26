@@ -4,6 +4,10 @@ body {
   font-size: 16px;
 }
 
+* {
+  outline: none;
+}
+
 button.btn,
 a.btn {
   padding: 10px 20px;
@@ -11,6 +15,29 @@ a.btn {
   border: none;
   color: $content-white;
   text-decoration: none;
+  background-color: $accent;
+  cursor: pointer;
+  outline: none;
+  @include transition;
+
+  &:hover {
+    background-color: $accent-hover;
+  }
+
+  &:active {
+    background-color: $accent-active;
+  }
+
+  &:focus {
+    background-color: $bg;
+    color: $btn;
+    box-shadow: 0px 0px 6px -1px $accent;
+  }
+
+  &:disabled {
+    background-color: $disabled;
+    color: $disabled-text;
+  }
 }
 
 .ungutter {
@@ -28,4 +55,20 @@ a.btn {
 
 .justify-between {
   justify-content: space-between;
+}
+
+a {
+  text-decoration: none;
+  color: $link;
+  @include transition;
+
+  &:hover,
+  &:active {
+    color: $link-hover;
+  }
+
+  &:focus,
+  &:disabled {
+    color: $link-active;
+  }
 }
