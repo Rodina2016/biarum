@@ -11,8 +11,45 @@
     }
 
     &-info {
+      margin-top: 180px;
+      height: 60%;
+      display: flex;
+      flex-direction: column;
       text-align: center;
       color: $content-white;
+    }
+
+    &-container {
+      height: 100%;
+    }
+
+    &-heading {
+      font-family: $ff-accent;
+      font-size: 82px;
+      text-transform: uppercase;
+      line-height: .9;
+
+      &--green {
+        color: $accent;
+      }
+    }
+
+    &-text {
+      margin:25px auto;
+      font-family: $ff-accent-second;
+      font-size: 25px;
+      line-height: 1.5;
+      flex-grow: 1;
+    }
+
+    &-mark {
+      font-size: 18px;
+      font-family: $ff-accent;
+      text-transform: uppercase;
+
+      &--green {
+        color: $accent;
+      }
     }
   }
 
