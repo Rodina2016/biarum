@@ -1,5 +1,5 @@
 .header {
-  padding: 20px 0;
+  padding: 10px 0;
   background-color: $bg-dark;
 
   &__logo {
@@ -27,7 +27,8 @@
     }
   }
 
-  &__btn {
+  .header__btn {
     float: right;
+    padding: 7px 47px;
   }
 }

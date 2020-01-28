@@ -1,0 +1,27 @@
+.content-block {
+  padding: 60px 0 40px;
+  background: url("../img/banner.jpg") no-repeat top;
+  background-size: cover;
+  color: $content-white;
+  text-align: center;
+  font-size: 18px;
+
+  &__heading {
+    margin-top: 0;
+    text-align: center;
+
+    &--green {
+      color: $accent;
+    }
+  }
+
+  &__p {
+    &--lg{
+      font-size: 24px;
+    }
+
+    &--green {
+      color: $accent;
+    }
+  }
+}
