@@ -1,0 +1,13 @@
+.form-section {
+  padding: 60px 0 40px;
+  background-color: $bg-light;
+
+  &__heading {
+    margin-top: 0;
+    text-align: center;
+
+    &--blue {
+      color: $link;
+    }
+  }
+}
