@@ -1,6 +1,13 @@
 .header {
   padding: 10px 0;
   background-color: $bg-dark;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+
+  @media (max-width: 991px) {
+    padding: 10px 16px;
+  }
 
   &__logo {
     padding-right: $gutter;

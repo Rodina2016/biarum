@@ -4,6 +4,14 @@
   padding-right: $gutter;
   padding-left: $gutter;
   box-sizing: border-box;
+
+  @media (max-width: 991px) {
+    width: 760px;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 }
 
 @for $i from 1 to 16 {
@@ -23,6 +31,10 @@
 
 .flex {
   display: flex;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
 }
 
 .align-center {

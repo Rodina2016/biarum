@@ -16,19 +16,8 @@
   &__wrap {
     position: relative;
     margin-top: 60px;
-    padding: 40px 60px 50px;
+    padding: 40px 60px 0;
     background: $content-white;
-
-    &:after {
-      position: absolute;
-      top:195px;
-      left: 10px;
-      display: block;
-      width: 270px;
-      height: 360px;
-      content: '';
-      background: url("../img/book.png") no-repeat center;
-    }
   }
 
   &__text {
@@ -37,8 +26,32 @@
   }
 
   &__form {
-    max-width: 70%;
-    margin-left: auto;
+    width: 70%;
     margin-top: 60px;
+
+    @media (max-width: 991px) {
+      width: 100%;
+      margin-top: 0;
+    }
+  }
+
+  &__pic {
+    width: 30%;
+    margin-top: -20px;
+
+    @media (max-width: 991px) {
+      width: 100%;
+      text-align: center;
+    }
+
+    &-img {
+      position: relative;
+      top:70px;
+      left: -45px;
+
+      @media (max-width: 991px) {
+        position: static;
+      }
+    }
   }
 }
