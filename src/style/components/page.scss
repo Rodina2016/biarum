@@ -1,8 +1,13 @@
 body {
   font-family: $ff;
+  font-weight: 300;
   color: $content;
   font-size: 16px;
   line-height: 1.5;
+}
+
+main {
+  overflow: hidden;
 }
 
 * {
@@ -22,7 +27,7 @@ h2 {
 
 button.btn,
 a.btn {
-  padding: 3px 45px;
+  padding: 4px 50px;
   border-radius: 20px;
   border: none;
   font-weight: 600;
@@ -31,7 +36,9 @@ a.btn {
   background-color: $accent;
   cursor: pointer;
   outline: none;
+  font-size: 18px;
   @include transition;
+  line-height: normal;
 
   &:hover {
     background-color: $accent-hover;
@@ -52,27 +59,6 @@ a.btn {
     background-color: $disabled;
     color: $disabled-text;
   }
-}
-
-.ungutter {
-  margin-right: -$gutter;
-  margin-left: -$gutter;
-}
-
-.flex {
-  display: flex;
-}
-
-.align-center {
-  align-items: center;
-}
-
-.justify-between {
-  justify-content: space-between;
-}
-
-.justify-center {
-  justify-content: center;
 }
 
 a {

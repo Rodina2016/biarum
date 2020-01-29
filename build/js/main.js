@@ -10,4 +10,12 @@ $(document).ready(function(){
         navText: [" ", " "],
         navClass: ['cards-btn cards-btn--prev', 'cards-btn cards-btn--next'],
     });
+
+    $('input').change(function () {
+        if($(this).val().length) {
+            $(this).addClass('active');
+        } else {
+            $(this).removeClass('active');
+        }
+    });
 });

@@ -10,6 +10,8 @@
     &-item {
       color: $menu;
       text-decoration: none;
+      font-family: $ff-accent-second;
+      font-weight: 400;
 
       &:hover {
         color: $menu;
@@ -29,6 +31,5 @@
 
   .header__btn {
     float: right;
-    padding: 7px 47px;
   }
 }

@@ -1,16 +1,63 @@
 .form-block {
     &__row {
       display: flex;
+      margin-bottom: 15px;
+      align-items: center;
     }
 
   &__label {
     color: $link;
     font-size: 16px;
+    width: 20%;
+    font-family: $ff-accent-second;
+    font-weight: 400;
   }
 
   &__input {
-    height: 40px;
+    height: 38px;
+    padding: 0 15px;
+    width: 80%;
     border: 1px solid $border;
-    color: $border;
+    font-family: $ff-accent-second;
+    color: $form-text;
+
+    &.active {
+      border-color: $border-active;
+      color: $form-text;
+    }
+    &::placeholder {
+      font-family: $ff-accent-second;
+      color: $border;
+    }
+
+    &:hover {
+      border-color: $border-hover;
+
+      &::placeholder {
+        color: $border-hover;
+      }
+    }
+
+    &:focus {
+      border-color: transparent;
+      box-shadow: 0px 0px 5px 1px $border-active;
+      &::placeholder {
+        color: $border-active;
+      }
+    }
+
+    &:disabled {
+      background-color: $disabled;
+      border-color: $border-active;
+      color: $border-hover;
+
+      &::placeholder {
+        color: $border-hover;
+      }
+    }
+  }
+
+  &__btn {
+    margin-top: 30px;
   }
 }

@@ -1,5 +1,7 @@
 .form-section {
-  padding: 60px 0 40px;
+  padding: 60px 0 140px;
+  background: url("../img/decor-bottom.png") no-repeat bottom,
+    url("../img/banner-decor-bottom.png") no-repeat top;
   background-color: $bg-light;
 
   &__heading {
@@ -12,12 +14,31 @@
   }
 
   &__wrap {
-    padding: 40px 50px;
-    background-color: $content-white;
+    position: relative;
+    margin-top: 60px;
+    padding: 40px 60px 50px;
+    background: $content-white;
+
+    &:after {
+      position: absolute;
+      top:195px;
+      left: 10px;
+      display: block;
+      width: 270px;
+      height: 360px;
+      content: '';
+      background: url("../img/book.png") no-repeat center;
+    }
   }
 
   &__text {
     font-size: 20px;
     text-align: center;
+  }
+
+  &__form {
+    max-width: 70%;
+    margin-left: auto;
+    margin-top: 60px;
   }
 }
