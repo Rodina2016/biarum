@@ -12,6 +12,12 @@
   }
 
   &__wrap {
+    padding: 40px 50px;
     background-color: $content-white;
+  }
+
+  &__text {
+    font-size: 20px;
+    text-align: center;
   }
 }

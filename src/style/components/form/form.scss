@@ -1,0 +1,16 @@
+.form-block {
+    &__row {
+      display: flex;
+    }
+
+  &__label {
+    color: $link;
+    font-size: 16px;
+  }
+
+  &__input {
+    height: 40px;
+    border: 1px solid $border;
+    color: $border;
+  }
+}
