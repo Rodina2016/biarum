@@ -10,4 +10,8 @@
       color: $link;
     }
   }
+
+  &__wrap {
+    background-color: $content-white;
+  }
 }
