@@ -15,7 +15,10 @@
 
   @media (max-width: 768px) {
     height: 165px;
-    padding: 0 40px;
+  }
+
+  @media (max-width: 567px) {
+    height: 115px;
   }
 
   &__logo {
@@ -27,6 +30,10 @@
       @media (max-width: 768px) {
         max-width: inherit;
       }
+
+      @media (max-width: 567px) {
+        max-width: 150px;
+      }
     }
   }
 
@@ -37,39 +44,87 @@
       position: relative;
       display: block;
       width: 34px;
-      height: 5px;
-      background-color: $content-white;
+      border-top: 5px solid $content-white;
+      height: 25px;
 
       &:after {
           content: '';
           position: absolute;
-          top: 10px;
+          top: 6px;
           width: 34px;
           height: 5px;
           background-color: $content-white;
+        transition: 0.2s ease-in;
         }
 
       &:before {
         content: '';
         position: absolute;
-        top: 20px;
+        top: 17px;
         width: 34px;
         height: 5px;
         background-color: $content-white;
+        transition: 0.2s ease-in;
+      }
+    }
+
+    &.show {
+      border-color: transparent;
+      &:before {
+        transform: rotate(45deg);
+        top: 7px;
+      }
+
+      &:after {
+        transform: rotate(-45deg);
       }
     }
   }
 
   &__menu {
-
     @media (max-width: 768px) {
       display: none;
+
+      &.show {
+        position: absolute;
+        top: 165px;
+        left: 0;
+        display: block;
+        width: 100%;
+        padding: 0 45px 45px;
+        box-sizing: border-box;
+        flex-direction: column;
+        background-color: $bg-dark;
+
+        @media (max-width: 567px) {
+          top:115px;
+        }
+      }
     }
+
+    &-list {
+      @media (max-width: 768px) {
+        width: 100%;
+        flex-direction: column;
+        padding: 0;
+      }
+    }
+
     &-item {
       color: $menu;
       text-decoration: none;
       font-family: $ff-accent-second;
       font-weight: 400;
+
+      @media (max-width: 768px) {
+        text-align: center;
+        font-size: 38px;
+        padding-bottom: 20px;
+      }
+
+      @media (max-width: 768px) {
+        font-size: 16px;
+      }
 
       &:hover {
         color: $menu;
@@ -86,8 +141,18 @@
       }
     }
   }
+  
+  &__btn {
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+  }
 
-  .header__btn {
+  .header__btn-item {
     float: right;
+
+    @media (max-width: 768px) {
+      float: none;
+    }
   }
 }

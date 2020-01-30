@@ -9,6 +9,14 @@ body {
 main {
   overflow: hidden;
   padding-top: 70px;
+
+  @media (max-width: 768px) {
+    padding-top: 165px;
+  }
+
+  @media (max-width: 567px) {
+    padding-top: 115px;
+  }
 }
 
 * {
@@ -24,6 +32,15 @@ h1,h2,h3 {
 h2 {
   font-size: 52px;
   margin: 30px 0;
+
+  @media (max-width: 768px) {
+    font-size: 100px;
+  }
+
+  @media (max-width: 567px) {
+    font-size: 45px;
+    margin: 15px 0;
+  }
 }
 
 button.btn,
@@ -40,6 +57,20 @@ a.btn {
   font-size: 18px;
   @include transition;
   line-height: normal;
+
+  @media (max-width:768px) {
+    font-size: 38px;
+    padding: 25px 0;
+    width: 100%;
+    border-radius: 6px;
+    text-align: center;
+    border-bottom: 6px solid $accent-border;
+  }
+
+  @media (max-width:768px) {
+    font-size: 18px;
+    padding: 5px 0;
+  }
 
   &:hover {
     background-color: $accent-hover;

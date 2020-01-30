@@ -10,6 +10,9 @@
 
     &--blue {
       color: $link;
+      @media (max-width: 768px) {
+        display: block;
+      }
     }
   }
 
@@ -18,11 +21,27 @@
     margin-top: 60px;
     padding: 40px 60px 0;
     background: $content-white;
+
+    @media (max-width: 768px) {
+      background-color: transparent;
+      padding: 0;
+      margin-top: 0;
+    }
   }
 
   &__text {
     font-size: 20px;
     text-align: center;
+
+    @media (max-width: 768px) {
+      font-size: 38px;
+      margin-bottom: 50px;
+    }
+
+    @media (max-width: 567px) {
+      font-size: 18px;
+      margin-bottom: 50px;
+    }
   }
 
   &__form {
@@ -48,6 +67,7 @@
       position: relative;
       top:70px;
       left: -45px;
+      max-width: 100%;
 
       @media (max-width: 991px) {
         position: static;
