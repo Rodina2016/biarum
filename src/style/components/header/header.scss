@@ -1,19 +1,70 @@
 .header {
+  display: flex;
+  align-items: center;
   padding: 10px 0;
+  height: 70px;
   background-color: $bg-dark;
   position: fixed;
   width: 100%;
   z-index: 2;
+  box-sizing: border-box;
 
   @media (max-width: 991px) {
     padding: 10px 16px;
   }
 
+  @media (max-width: 768px) {
+    height: 165px;
+    padding: 0 40px;
+  }
+
   &__logo {
     padding-right: $gutter;
+
+    &-img {
+      max-width: 155px;
+
+      @media (max-width: 768px) {
+        max-width: inherit;
+      }
+    }
+  }
+
+  &__burger {
+    display: none;
+
+    @media (max-width: 768px) {
+      position: relative;
+      display: block;
+      width: 34px;
+      height: 5px;
+      background-color: $content-white;
+
+      &:after {
+          content: '';
+          position: absolute;
+          top: 10px;
+          width: 34px;
+          height: 5px;
+          background-color: $content-white;
+        }
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 20px;
+        width: 34px;
+        height: 5px;
+        background-color: $content-white;
+      }
+    }
   }
 
   &__menu {
+
+    @media (max-width: 768px) {
+      display: none;
+    }
     &-item {
       color: $menu;
       text-decoration: none;
